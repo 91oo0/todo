@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let vc = TopTabBarViewController()
+        let storyboard: UIStoryboard = UIStoryboard(name: "Root", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Root") as! RootViewController
         
         window.makeKeyAndVisible()
         window.rootViewController = vc
