@@ -20,6 +20,7 @@
 		3793F7812608439B00ED2E91 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793F7802608439B00ED2E91 /* RootViewController.swift */; };
 		3793F7922608E21700ED2E91 /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3793F7912608E21700ED2E91 /* Data.storyboard */; };
 		3793F7972608E22200ED2E91 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3793F7962608E22200ED2E91 /* Setting.storyboard */; };
+		3793F79D260992F000ED2E91 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793F79C260992F000ED2E91 /* DataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3793F7802608439B00ED2E91 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3793F7912608E21700ED2E91 /* Data.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Data.storyboard; sourceTree = "<group>"; };
 		3793F7962608E22200ED2E91 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		3793F79C260992F000ED2E91 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				3793F7802608439B00ED2E91 /* RootViewController.swift */,
 				3793F767260725BD00ED2E91 /* TopTabBarViewController.swift */,
+				3793F79C260992F000ED2E91 /* DataViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3793F6FA2607162600ED2E91 /* AppDelegate.swift in Sources */,
+				3793F79D260992F000ED2E91 /* DataViewController.swift in Sources */,
 				3793F6FC2607162600ED2E91 /* SceneDelegate.swift in Sources */,
 				3793F7042607162600ED2E91 /* Todo.xcdatamodeld in Sources */,
 				3793F769260725BD00ED2E91 /* TopTabBarViewController.swift in Sources */,
