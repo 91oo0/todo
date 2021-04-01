@@ -32,10 +32,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" selectedImage="house.fill" id="J0V-i0-h7d"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="linechart" destination="lUv-Hg-bxr" id="F5g-L8-Ve3"/>
-                        <outlet property="piecht" destination="nSM-eF-irc" id="khD-kz-Znr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPO-PV-17q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
