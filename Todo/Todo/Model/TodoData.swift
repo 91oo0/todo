@@ -2,15 +2,20 @@ import UIKit
 import RealmSwift
 
 class Task: Object {
-    dynamic var id          = 0     // ID
-    dynamic var title       = ""    // タイトル
-    dynamic var during      = 0     // 間隔
-    dynamic var lastDate    = ""    // 最終実行日
-    dynamic var taskDisable = ""    // 無効
+    @objc dynamic var id          = 0     // ID
+    @objc dynamic var title       = ""    // タイトル
+    @objc dynamic var during      = 0     // 間隔
+    @objc dynamic var lastDate    = ""    // 最終実行日
+    @objc dynamic var taskDisable = ""    // 無効
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 class RealmDatabase {
     
+    // TODO: try!ではエラー時にクラッシュするのでexception対応する
     let realm = try! Realm()
     
     func createTask(data: Task) {
@@ -29,7 +34,7 @@ class RealmDatabase {
         return list
     }
     
-    private func setTaskId(data: Task) {
+    private func setTaskId(to data: Task) {
 //        let latestTask = realm.objects(Task.self).sorted(byKeyPath: "id").max()
     }
 }
