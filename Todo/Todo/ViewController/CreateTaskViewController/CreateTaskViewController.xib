@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateTaskViewController" customModule="Todo" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="cSV-64-db1" id="Hgr-MU-lkA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-7A-rgk">
+                    <rect key="frame" x="182" y="792" width="50" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.98721104449999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="NQ3-pe-nhH"/>
+                        <constraint firstAttribute="height" constant="50" id="SYb-hU-tPc"/>
+                    </constraints>
+                    <color key="tintColor" red="0.26016435030000001" green="0.26477605100000001" blue="0.37648344039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="rxo-hl-fD3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-XA-gci">
+                    <rect key="frame" x="82" y="712" width="250" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="E7n-9F-F15"/>
+                        <constraint firstAttribute="height" constant="50" id="yLR-eF-iKC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="登録">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="submitButton:" destination="-1" eventType="touchUpInside" id="iEE-4o-TWV"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-su-au3">
+                    <rect key="frame" x="0.0" y="44" width="414" height="416"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKv-9v-Yel">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" task name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" id="cSV-64-db1" userLabel="task name">
+                                    <rect key="frame" x="158" y="33" width="97" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="aF4-d2-KNz"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUF-Fi-3cx">
+                            <rect key="frame" x="0.0" y="100" width="414" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="SrU-51-V70"/>
+                            </constraints>
+                        </view>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="CHx-cx-Er5">
+                            <rect key="frame" x="0.0" y="200" width="414" height="216"/>
+                        </datePicker>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qKv-9v-Yel" secondAttribute="trailing" id="Szo-Dv-5LR"/>
+                        <constraint firstItem="qKv-9v-Yel" firstAttribute="leading" secondItem="hfJ-su-au3" secondAttribute="leading" id="qSM-uC-ct8"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.30172303080000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="WgV-XA-gci" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AVp-6e-qJS"/>
+                <constraint firstItem="hfJ-su-au3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MRk-ch-I2d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WgV-XA-gci" secondAttribute="bottom" constant="100" id="Wzo-pz-HE1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="haZ-7A-rgk" secondAttribute="bottom" constant="20" id="YwS-fT-1F0"/>
+                <constraint firstItem="hfJ-su-au3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cBs-4x-VmN"/>
+                <constraint firstItem="haZ-7A-rgk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eiz-gm-3Ge"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hfJ-su-au3" secondAttribute="trailing" id="fSV-Ep-de6"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </view>
+    </objects>
+</document>
