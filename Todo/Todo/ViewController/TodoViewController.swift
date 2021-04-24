@@ -22,6 +22,7 @@ class TodoViewController: UIViewController {
 extension TodoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = presenter.fetchTodoList()?.count else { return 0 }
+        tableView.backgroundColor = UIColor(named: mainBackGroudColor)
         return count
     }
     
@@ -31,7 +32,7 @@ extension TodoViewController: UITableViewDelegate, UITableViewDataSource {
         // DBからfetchする
         if let taskList: [Task] = presenter.fetchTodoList() {
             cell.textLabel!.text = taskList[indexPath.row].title
-            cell.textLabel!.textColor = UIColor.white
+            cell.textLabel?.textColor = UIColor(named: mainBackGroudColor)
         }
         return cell
     }
