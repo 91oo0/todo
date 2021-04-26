@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let storyboard: UIStoryboard = UIStoryboard(name: "Root", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Root") as! RootViewController
+            
+        let storyboard: UIStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Onboarding") as! OnboardingViewController
         
         window.makeKeyAndVisible()
         window.rootViewController = vc
@@ -57,7 +58,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-
