@@ -1,4 +1,5 @@
 import UIKit
+import SwiftyUserDefaults
 
 class TodoViewController: UIViewController {
     let presenter = TodoPresenter()
@@ -13,8 +14,6 @@ class TodoViewController: UIViewController {
     }
     
     @IBAction func didTapCreateTaskButton(_ sender: UIButton) {
-//        navigationController?.pushViewController(CreateTaskViewController(), animated: true)
-//        navigationController?.presentingViewController
         present(CreateTaskViewController(), animated: true)
     }
 }

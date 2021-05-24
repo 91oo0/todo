@@ -9,6 +9,7 @@ target 'Todo' do
   pod 'SVProgressHUD'
   pod 'Charts'
   pod 'RealmSwift'
+  pod 'SwiftyUserDefaults'
 
   target 'TodoTests' do
     inherit! :search_paths

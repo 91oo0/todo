@@ -1,4 +1,5 @@
 import UIKit
+import SwiftyUserDefaults
 
 class OnboardingViewController: UIViewController {
     
@@ -49,6 +50,8 @@ class OnboardingViewController: UIViewController {
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: false)
+        Defaults[\.isFirstLaunch] = false
+        print("isFirstLaunch \(Defaults[\.isFirstLaunch])")
     }
 }
 

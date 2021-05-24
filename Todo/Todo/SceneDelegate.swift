@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,13 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-            
-        let storyboard: UIStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Onboarding") as! OnboardingViewController
-        
         window.makeKeyAndVisible()
-        window.rootViewController = vc
         
+        if Defaults[\.isFirstLaunch] {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Onboarding") as! OnboardingViewController
+            window.rootViewController = vc
+        } else {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Root", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Root") as! RootViewController
+            window.rootViewController = vc
+        }
         self.window = window
     }
 

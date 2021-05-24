@@ -13,6 +13,7 @@
 		372ACE82261C9F0D009DB2A7 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372ACE80261C9F0D009DB2A7 /* CreateTaskViewController.xib */; };
 		372F9D972634FE8800DD0CFC /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372F9D962634FE8800DD0CFC /* Onboarding.storyboard */; };
 		372F9D9C2634FEA400DD0CFC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F9D9B2634FEA400DD0CFC /* OnboardingViewController.swift */; };
+		372F9DA4263D9B5900DD0CFC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F9DA3263D9B5900DD0CFC /* UserDefaults.swift */; };
 		3793F6FA2607162600ED2E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793F6F92607162600ED2E91 /* AppDelegate.swift */; };
 		3793F6FC2607162600ED2E91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793F6FB2607162600ED2E91 /* SceneDelegate.swift */; };
 		3793F7042607162600ED2E91 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3793F7022607162600ED2E91 /* Todo.xcdatamodeld */; };
@@ -60,6 +61,7 @@
 		372ACE80261C9F0D009DB2A7 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTaskViewController.xib; sourceTree = "<group>"; };
 		372F9D962634FE8800DD0CFC /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		372F9D9B2634FEA400DD0CFC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		372F9DA3263D9B5900DD0CFC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		3793F6F62607162600ED2E91 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3793F6F92607162600ED2E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3793F6FB2607162600ED2E91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,14 +138,6 @@
 			path = CreateTaskViewController;
 			sourceTree = "<group>";
 		};
-		372F9D952634FDDA00DD0CFC /* OnBoardingViewController */ = {
-			isa = PBXGroup;
-			children = (
-				372F9D9B2634FEA400DD0CFC /* OnboardingViewController.swift */,
-			);
-			path = OnBoardingViewController;
-			sourceTree = "<group>";
-		};
 		3793F6ED2607162600ED2E91 = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +167,6 @@
 				371F6B5E261996ED0004A4FE /* Presenter */,
 				3793F77F2608438400ED2E91 /* ViewController */,
 				3793F774260813E600ED2E91 /* Storyboard */,
-				3793F732260718EF00ED2E91 /* Controller */,
 				3793F731260718DF00ED2E91 /* Model */,
 				3793F72F2607185300ED2E91 /* View */,
 				3793F7302607189800ED2E91 /* Resource */,
@@ -208,8 +201,6 @@
 		3793F72F2607185300ED2E91 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				372F9D952634FDDA00DD0CFC /* OnBoardingViewController */,
-				3793F7332607192100ED2E91 /* TopTabBarViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,20 +221,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3793F732260718EF00ED2E91 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		3793F7332607192100ED2E91 /* TopTabBarViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TopTabBarViewController;
-			sourceTree = "<group>";
-		};
 		3793F774260813E600ED2E91 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +239,7 @@
 				372ACE89261C9F2B009DB2A7 /* CreateTaskViewController */,
 				3793F7802608439B00ED2E91 /* RootViewController.swift */,
 				3793F767260725BD00ED2E91 /* TopTabBarViewController.swift */,
+				372F9D9B2634FEA400DD0CFC /* OnboardingViewController.swift */,
 				3793F79C260992F000ED2E91 /* TodoViewController.swift */,
 			);
 			path = ViewController;
@@ -271,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				37D50CA526288563006E97EF /* Constants.swift */,
+				372F9DA3263D9B5900DD0CFC /* UserDefaults.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -550,6 +529,7 @@
 				37D50CA626288563006E97EF /* Constants.swift in Sources */,
 				372ACE81261C9F0D009DB2A7 /* CreateTaskViewController.swift in Sources */,
 				3793F769260725BD00ED2E91 /* TopTabBarViewController.swift in Sources */,
+				372F9DA4263D9B5900DD0CFC /* UserDefaults.swift in Sources */,
 				371F6B462615DD7B0004A4FE /* TodoData.swift in Sources */,
 				372F9D9C2634FEA400DD0CFC /* OnboardingViewController.swift in Sources */,
 				3793F7812608439B00ED2E91 /* RootViewController.swift in Sources */,
