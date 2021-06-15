@@ -51,7 +51,6 @@ class OnboardingViewController: UIViewController {
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: false)
         Defaults[\.isFirstLaunch] = false
-        print("isFirstLaunch \(Defaults[\.isFirstLaunch])")
     }
 }
 

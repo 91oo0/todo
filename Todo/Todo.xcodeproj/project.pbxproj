@@ -28,6 +28,8 @@
 		3793F7922608E21700ED2E91 /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3793F7912608E21700ED2E91 /* Todo.storyboard */; };
 		3793F7972608E22200ED2E91 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3793F7962608E22200ED2E91 /* Setting.storyboard */; };
 		3793F79D260992F000ED2E91 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793F79C260992F000ED2E91 /* TodoViewController.swift */; };
+		37BAAF442678F5D000D7943D /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAAF422678F5D000D7943D /* TaskCollectionViewCell.swift */; };
+		37BAAF452678F5D000D7943D /* TaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BAAF432678F5D000D7943D /* TaskCollectionViewCell.xib */; };
 		37D50CA026273C31006E97EF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D50C9F26273C31006E97EF /* Color.xcassets */; };
 		37D50CA626288563006E97EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D50CA526288563006E97EF /* Constants.swift */; };
 		9D362732DC900B1DB6BB4828 /* Pods_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80814354D0DAA408653D06F9 /* Pods_TodoTests.framework */; };
@@ -82,6 +84,8 @@
 		3793F7912608E21700ED2E91 /* Todo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
 		3793F7962608E22200ED2E91 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		3793F79C260992F000ED2E91 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		37BAAF422678F5D000D7943D /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		37BAAF432678F5D000D7943D /* TaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCollectionViewCell.xib; sourceTree = "<group>"; };
 		37D50C9F26273C31006E97EF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		37D50CA526288563006E97EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42CE714345AAB2D727CA3554 /* Pods_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,7 @@
 		3793F72F2607185300ED2E91 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37BAAF412678F5A200D7943D /* TaskCollectionViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +248,15 @@
 				3793F79C260992F000ED2E91 /* TodoViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		37BAAF412678F5A200D7943D /* TaskCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37BAAF422678F5D000D7943D /* TaskCollectionViewCell.swift */,
+				37BAAF432678F5D000D7943D /* TaskCollectionViewCell.xib */,
+			);
+			path = TaskCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		37D50CA426288504006E97EF /* Util */ = {
@@ -386,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3793F7092607162700ED2E91 /* LaunchScreen.storyboard in Resources */,
+				37BAAF452678F5D000D7943D /* TaskCollectionViewCell.xib in Resources */,
 				37D50CA026273C31006E97EF /* Color.xcassets in Resources */,
 				3793F77B2608360200ED2E91 /* Home.storyboard in Resources */,
 				3793F7062607162700ED2E91 /* Assets.xcassets in Resources */,
@@ -526,6 +541,7 @@
 				3793F6FC2607162600ED2E91 /* SceneDelegate.swift in Sources */,
 				3793F7042607162600ED2E91 /* Todo.xcdatamodeld in Sources */,
 				371F6B672619A0C80004A4FE /* TodoPresenter.swift in Sources */,
+				37BAAF442678F5D000D7943D /* TaskCollectionViewCell.swift in Sources */,
 				37D50CA626288563006E97EF /* Constants.swift in Sources */,
 				372ACE81261C9F0D009DB2A7 /* CreateTaskViewController.swift in Sources */,
 				3793F769260725BD00ED2E91 /* TopTabBarViewController.swift in Sources */,
