@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mM-wr-jh3">
-                        <rect key="frame" x="20" y="0.0" width="374" height="100"/>
+                        <rect key="frame" x="10" y="0.0" width="394" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-QT-rr1">
                                 <rect key="frame" x="15" y="38" width="82.5" height="24"/>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qob-FK-Xci">
-                                <rect key="frame" x="321.5" y="67" width="37.5" height="18"/>
+                                <rect key="frame" x="341.5" y="67" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
@@ -40,16 +40,26 @@
                             <constraint firstItem="O3g-QT-rr1" firstAttribute="leading" secondItem="3mM-wr-jh3" secondAttribute="leading" constant="15" id="Z9x-KN-isN"/>
                             <constraint firstAttribute="trailing" secondItem="Qob-FK-Xci" secondAttribute="trailing" constant="15" id="tRQ-bG-m7s"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="3mM-wr-jh3" secondAttribute="trailing" constant="20" id="5ee-oY-nqU"/>
-                <constraint firstItem="3mM-wr-jh3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="7sz-XE-92o"/>
+                <constraint firstAttribute="trailing" secondItem="3mM-wr-jh3" secondAttribute="trailing" constant="10" id="5ee-oY-nqU"/>
+                <constraint firstItem="3mM-wr-jh3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="7sz-XE-92o"/>
                 <constraint firstItem="3mM-wr-jh3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IdH-6l-deS"/>
                 <constraint firstAttribute="bottom" secondItem="3mM-wr-jh3" secondAttribute="bottom" id="buH-HW-gJ4"/>
             </constraints>
+            <connections>
+                <outlet property="lastExecDate" destination="Qob-FK-Xci" id="zp5-0K-eaX"/>
+                <outlet property="titleLabel" destination="O3g-QT-rr1" id="Jzr-nx-P4d"/>
+            </connections>
             <point key="canvasLocation" x="26" y="62"/>
         </collectionViewCell>
     </objects>

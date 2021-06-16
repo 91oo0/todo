@@ -23,17 +23,4 @@ class TodoPresenter {
     func getLastExecDate(at indexPath: Int) -> String {
         return taskList[indexPath].lastDate
     }
-    
-    func hoge() {
-        let realm = RealmDatabase.init()
-        let task = Task.init()
-        
-        task.id = 0
-        task.title = "お試しタスク"
-        task.during = 5
-        task.lastDate = "2021/06/15"
-        task.taskDisable = "enable"
-        
-        realm.createTask(data: task)
-    }
 }
