@@ -22,8 +22,12 @@ class RealmDatabase {
     }
     
     // TODO: try!ではエラー時にクラッシュするのでexception対応する
-    
-    func createTask(data: Task) {
+    func saveTask(data: Task) {
+        if data.id == 0 { data.id = createNewId() }
+        // TODO: 同時書き込み防止のためのretry処理を追加する
+//        if realm.isInWriteTransaction {
+//            realm.add(data)
+//        }
         try! realm.write() {
             realm.add(data)
         }
@@ -39,7 +43,7 @@ class RealmDatabase {
         return list
     }
     
-    private func setTaskId(to data: Task) {
-//        let latestTask = realm.objects(Task.self).sorted(byKeyPath: "id").max()
+    private func createNewId() -> Int {
+        return (realm.objects(Task.self).sorted(byKeyPath: "id", ascending: false).first?.id ?? 0) + 1
     }
 }

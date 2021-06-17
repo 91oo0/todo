@@ -12,12 +12,24 @@ class TodoViewController: UIViewController {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.fetchTodoList()
+        collectionView.reloadData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
     }
     
     @IBAction func didTapCreateTaskButton(_ sender: UIButton) {
-        present(CreateTaskViewController(), animated: true)
+        navigateToCreateTask()
+    }
+    
+    func navigateToCreateTask() {
+        let vc = CreateTaskViewController.init(nibName: "CreateTaskViewController", bundle: nil)
+        vc.presentationController?.delegate = self
+        present(vc, animated: true)
     }
 }
 
@@ -42,5 +54,13 @@ extension TodoViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.titleLabel.text = presenter.getTaskTitle(at: indexPath.row)
         cell.lastExecDate.text = presenter.getLastExecDate(at: indexPath.row)
         return cell
+    }
+}
+
+extension TodoViewController: UIAdaptivePresentationControllerDelegate {
+    
+    func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
+        presenter.fetchTodoList()
+        collectionView.reloadData()
     }
 }

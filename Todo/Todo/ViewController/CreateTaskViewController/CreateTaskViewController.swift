@@ -1,25 +1,21 @@
-//
-//  CreateTaskViewController.swift
-//  Todo
-//  #0FC1C4
-//  Created by kotaro.oka on 2021/04/06.
-//
-
 import UIKit
 
 class CreateTaskViewController: UIViewController, UITextFieldDelegate {
+    
+    let presenter = CreateTaskPresenter()
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.delegate = self
+        titleTextField.delegate = self
         
         setupKeyToolBar()
     }
     
     @IBAction func submitButton(_ sender: UIButton) {
+        presenter.saveTask(title: titleTextField.text ?? "", lastDate: "2021/06/18")
         self.dismiss(animated: true)
     }
     
@@ -27,7 +23,9 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate {
     @IBAction func didTapCloseButton(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-    
+}
+
+extension CreateTaskViewController {
     func setupKeyToolBar() {
         
         let keyToolbar = UIToolbar()
@@ -39,10 +37,16 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate {
 
         keyToolbar.items = [spacer, doneButton]
 
-        textField.inputAccessoryView = keyToolbar
+        titleTextField.inputAccessoryView = keyToolbar
+    }
+
+    @objc func closeKeyboard() {
+        titleTextField.endEditing(true)
     }
     
-    @objc func closeKeyboard() {
-        textField.endEditing(true)
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else { return }
+        presentationController.delegate?.presentationControllerWillDismiss?(presentationController)
     }
 }
