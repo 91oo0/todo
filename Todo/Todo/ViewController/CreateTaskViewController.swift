@@ -10,8 +10,23 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         titleTextField.delegate = self
-        
         setupKeyToolBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    @IBAction func selectPlaceViewDidTap(_ sender: UITapGestureRecognizer) {
+        navigateToSelectPlaceViewController()
+    }
+    
+    @IBAction func selectOftenViewDidTap(_ sender: UITapGestureRecognizer) {
+        navigateToSelectPlaceViewController()
+    }
+    
+    @IBAction func selectExecDateViewDidTap(_ sender: UITapGestureRecognizer) {
+        navigateToSelectPlaceViewController()
     }
     
     @IBAction func submitButton(_ sender: UIButton) {
@@ -27,7 +42,7 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate {
 
 extension CreateTaskViewController {
     func setupKeyToolBar() {
-        
+
         let keyToolbar = UIToolbar()
         keyToolbar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40)
         keyToolbar.barStyle = .default
@@ -48,5 +63,11 @@ extension CreateTaskViewController {
         super.dismiss(animated: flag, completion: completion)
         guard let presentationController = presentationController else { return }
         presentationController.delegate?.presentationControllerWillDismiss?(presentationController)
+    }
+    
+    func navigateToSelectPlaceViewController() {
+        let storyboard = UIStoryboard.init(name: "SelectPlace", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "SelectPlaceView")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

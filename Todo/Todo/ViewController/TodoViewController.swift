@@ -27,8 +27,9 @@ class TodoViewController: UIViewController {
     }
     
     func navigateToCreateTask() {
-        let vc = CreateTaskViewController.init(nibName: "CreateTaskViewController", bundle: nil)
-        vc.presentationController?.delegate = self
+        let storyboard = UIStoryboard(name: "CreateTask", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CreateTaskNavi")
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
 }
